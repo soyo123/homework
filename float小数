@@ -1,1 +1,28 @@
-っでd
+//main.cpp
+#include<stdio.h>
+#include<string.h>
+float StringFloat(char *pStr)
+{
+    usigned int nData = 0;
+    float *pData;
+    
+    for(int i=0;I<31;i++)
+    {
+        nData +=(pStr[i]-'0');
+        nData <<= 1;
+    }
+    nData +=(pStr[31]-'0');
+    pData =(float *)&nData;
+    return *pData;
+
+
+}
+int main(){
+    char a[33];
+    printf("二進数を入力して：");
+    scanf("%s",a);
+    float  c=StringFloat(a);
+    printf("%f\n",c);
+    return 0;
+
+}
